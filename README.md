@@ -51,43 +51,6 @@ Install at least one of the following:
 3. Open in browser:
    http://localhost:5500/index.html
 
-## Upload To GitHub
-
-### 1. Create a GitHub repository
-
-1. Go to GitHub.
-2. Click New Repository.
-3. Name it (example: calculatorsuite).
-4. Create repository.
-
-### 2. Push this project from terminal
-
-Run these commands inside your project folder:
-
-git init
-git add .
-git commit -m "Initial commit: CalcSuite"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-
-Replace YOUR_USERNAME and YOUR_REPOSITORY with your actual values.
-
-## Deploy On GitHub Pages
-
-### If repository is public
-
-1. Open your repository on GitHub.
-2. Go to Settings -> Pages.
-3. Under Build and deployment:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: / (root)
-4. Save.
-5. Wait 1-2 minutes.
-6. Open:
-   https://YOUR_USERNAME.github.io/YOUR_REPOSITORY/
-
 The landing page index.html will load first.
 
 ## Theme Toggle
