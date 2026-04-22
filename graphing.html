@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphing Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="tool.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">CalcSuite</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="simple.html">Simple</a>
+        <a href="scientific.html">Scientific</a>
+        <a href="graphing.html">Graphing</a>
+        <a href="financial.html">Financial</a>
+        <a href="programmable.html">Programmable</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle type="button">Dark</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="topbar">
+      <h1>Graphing Calculator</h1>
+      <a href="index.html">Back to Hub</a>
+    </div>
+
+    <section class="panel">
+      <p class="subtitle">Enter y as a function of x. Example: sin(x), x^2 - 4, sqrt(abs(x)).</p>
+      <div class="row">
+        <div>
+          <label for="graph-expression">Expression y =</label>
+          <input class="field" id="graph-expression" value="sin(x)" />
+        </div>
+        <div>
+          <label for="graph-range">X Range (+/-)</label>
+          <input class="field" id="graph-range" type="number" value="10" min="1" max="100" />
+        </div>
+      </div>
+      <div class="row" style="margin-top: 0.7rem;">
+        <button class="btn" id="plot-btn" type="button">Plot Graph</button>
+        <button class="btn btn-muted" id="reset-btn" type="button">Reset</button>
+      </div>
+      <p class="subtitle" id="graph-message" style="margin-top:0.8rem;"></p>
+      <canvas id="graph-canvas" width="960" height="460" style="width:100%;margin-top:0.4rem;border:2px solid #cbd5e1;border-radius:12px;background:#f8fafc;"></canvas>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>CalcSuite</span>
+      <span>Graphing calculator</span>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="graphing.js"></script>
+</body>
+</html>

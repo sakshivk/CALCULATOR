@@ -1,0 +1,123 @@
+:root {
+  --bg: #f3f6fb;
+  --bg-gradient: radial-gradient(circle at 10% 0%, #ffffff 0%, #f3f6fb 55%, #e8eef9 100%);
+  --text: #0f172a;
+  --muted: #475569;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #d6deeb;
+  --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --primary: #0ea5e9;
+  --primary-strong: #0284c7;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --bg-gradient: radial-gradient(circle at 10% 0%, #17233a 0%, #0b1220 60%, #070d17 100%);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --surface: #111a2c;
+  --surface-2: #1a2740;
+  --border: #2a3b5c;
+  --shadow: 0 14px 26px rgba(2, 6, 23, 0.45);
+  --primary: #38bdf8;
+  --primary-strong: #0ea5e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--text);
+  background: var(--bg-gradient);
+}
+
+.shell {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-row {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 1.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.footer-row {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 880px) {
+  .site-nav {
+    display: none;
+  }
+}

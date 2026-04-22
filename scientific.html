@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">CalcSuite</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="simple.html">Simple</a>
+        <a href="scientific.html">Scientific</a>
+        <a href="graphing.html">Graphing</a>
+        <a href="financial.html">Financial</a>
+        <a href="programmable.html">Programmable</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle type="button">Dark</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="calculator" aria-label="Calculator">
+      <h1>Scientific Calculator</h1>
+      <p class="hint">Shortcuts: S/C/T (trig), L (log), N (ln), Q (sqrt), A (abs), P (pi), R (Ans), D (DEG/RAD).</p>
+
+      <div class="status-row">
+        <span class="mode-label">Angle Mode:</span>
+        <button class="btn btn-action btn-mode" data-action="toggle-angle" id="angle-mode">DEG</button>
+        <span class="memory-indicator" id="memory-indicator">M: 0</span>
+      </div>
+
+      <div class="display" id="display" aria-live="polite">0</div>
+
+      <div class="buttons">
+        <button class="btn btn-memory" data-action="memory-clear">MC</button>
+        <button class="btn btn-memory" data-action="memory-recall">MR</button>
+        <button class="btn btn-memory" data-action="memory-add">M+</button>
+        <button class="btn btn-memory" data-action="memory-subtract">M-</button>
+        <button class="btn btn-fn" data-action="use-answer">Ans</button>
+
+        <button class="btn btn-fn" data-value="sin(">sin</button>
+        <button class="btn btn-fn" data-value="cos(">cos</button>
+        <button class="btn btn-fn" data-value="tan(">tan</button>
+        <button class="btn btn-fn" data-value="log(">log</button>
+        <button class="btn btn-fn" data-value="ln(">ln</button>
+
+        <button class="btn btn-fn" data-value="sqrt(">sqrt</button>
+        <button class="btn btn-fn" data-value="^">x^y</button>
+        <button class="btn btn-fn" data-value="(">(</button>
+        <button class="btn btn-fn" data-value=")">)</button>
+        <button class="btn btn-fn" data-value="abs(">abs</button>
+
+        <button class="btn btn-fn" data-value="pi">pi</button>
+        <button class="btn btn-fn" data-value="e">e</button>
+        <button class="btn btn-action" data-action="clear">AC</button>
+        <button class="btn btn-action" data-action="delete">DEL</button>
+        <button class="btn btn-op" data-value="%">%</button>
+
+        <button class="btn btn-op" data-value="/">/</button>
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn btn-op" data-value="*">*</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn btn-op" data-value="-">-</button>
+        <button class="btn btn-op" data-action="toggle-sign">+/-</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn btn-op" data-value="+">+</button>
+        <button class="btn btn-equal" data-action="equals">=</button>
+
+        <button class="btn btn-zero" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+      </div>
+
+      <section class="history-panel" aria-label="Calculation history">
+        <div class="history-header">
+          <h2>History</h2>
+          <button class="history-clear" id="clear-history" type="button">Clear</button>
+        </div>
+        <ul class="history-list" id="history-list"></ul>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>CalcSuite</span>
+      <span>Scientific calculator</span>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="tool.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">CalcSuite</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="simple.html">Simple</a>
+        <a href="scientific.html">Scientific</a>
+        <a href="graphing.html">Graphing</a>
+        <a href="financial.html">Financial</a>
+        <a href="programmable.html">Programmable</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle type="button">Dark</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="topbar">
+      <h1>Simple Calculator</h1>
+      <a href="index.html">Back to Hub</a>
+    </div>
+
+    <section class="panel" aria-label="Simple calculator">
+      <p class="subtitle">Basic operations: +, -, *, /, %, decimal.</p>
+      <div class="display" id="simple-display" aria-live="polite">0</div>
+      <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+        <button class="btn btn-muted" data-action="clear">AC</button>
+        <button class="btn btn-muted" data-action="delete">DEL</button>
+        <button class="btn" data-value="%">%</button>
+        <button class="btn" data-value="/">/</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn" data-value="*">*</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn" data-value="-">-</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn" data-value="+">+</button>
+
+        <button class="btn" style="grid-column: span 2;" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn" data-action="equals">=</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>CalcSuite</span>
+      <span>Simple calculator</span>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="simple.js"></script>
+</body>
+</html>
